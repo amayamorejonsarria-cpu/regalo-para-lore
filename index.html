@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HB Lore... lov u❤</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #8955b5, #32134f 55%, #160923 100%);
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 25px;
+  box-shadow: 0 0 30px #b77aff;
+  z-index: 2;
+}
+
+h1 { color: #f9d8ec; }
+
+.moon { font-size: 75px; display: inline-block; }
+.sun { font-size: 65px; display: inline-block; }
+
+input, button {
+  padding: 13px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
+
+button {
+  background: #e8a9cb;
+  color: #28152d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden { display: none !important; }
+
+p { line-height: 1.8; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+.foto {
+  background: rgba(255,255,255,0.12);
+  padding: 9px;
+  border: 2px solid #d8a5ff;
+  border-radius: 18px;
+  box-shadow: 0 0 18px #a65cff;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 400px) {
+  .galeria { gap: 10px; }
+  .foto img { height: 145px; }
+}
+
+body::before, body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, white 90%, transparent),
+    radial-gradient(2px 2px at 30% 70%, white 90%, transparent),
+    radial-gradient(2px 2px at 50% 40%, white 90%, transparent),
+    radial-gradient(2px 2px at 75% 15%, white 90%, transparent),
+    radial-gradient(2px 2px at 90% 80%, white 90%, transparent),
+    radial-gradient(1px 1px at 65% 60%, white 90%, transparent);
+  background-size: 250px 250px;
+  animation: estrellas 4s ease-in-out infinite alternate;
+}
+
+body::after {
+  animation-delay: 2s;
+  transform: scale(1.2);
+}
+
+@keyframes estrellas {
+  from { opacity: .25; }
+  to { opacity: 1; }
+}
+
+.musica {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #d8a5ff;
+  border-radius: 20px;
+  background: rgba(255,255,255,.10);
+  box-shadow: 0 0 20px #a65cff;
+  text-align: center;
+}
+
+.musica h2 { color: #f0d5ff; }
+
+.boton-musica {
+  display: inline-block;
+  padding: 13px 22px;
+  margin: 15px;
+  color: white;
+  background: #8955b5;
+  border: 1px solid #e5c5ff;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #b77aff;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="login">
+  <div class="moon">🌙</div>
+  <div class="sun">☀️</div>
+
+  <h1>Para Lore...</h1>
+  <p>He preparado un pequeño universo para ti.</p>
+  <p>Pero primero tienes que descubrir la clave ❤️</p>
+
+  <input type="password" id="password" placeholder="Nuestra contraseña">
+  <button onclick="enter()">Descubrir mi regalo</button>
+  <p id="error"></p>
+</div>
+
+<div class="container hidden" id="gift">
+
+  <h1>HAPPY BIRTHDAY, LORE! ❤️</h1>
+  <h2>¡Tus 18! 🎂</h2>
+
+  <p>
+    Bienvenida a este pequeño universo que preparé para ti.
+    Hoy quería regalarte algo diferente, algo que puedas guardar
+    y recordar siempre.
+  </p>
+
+  <h2>Nuestra historia 📸</h2>
+  <p>Aquí comienza una colección de nuestros recuerdos.</p>
+
+  <div class="musica">
+    <h2>🎵 Nuestra canción ♡</h2>
+    <a class="boton-musica"
+       href="https://youtu.be/NalipNz4e3g"
+       target="_blank">
+       ▶ Escuchar Space Between
+    </a>
+  </div>
+
+  <div class="galeria">
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/Xrws4kPj/IMG-20251222-WA0062.jpg" alt="Recuerdo 1">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/R34XFJkj/IMG-20251222-WA0107.jpg" alt="Recuerdo 2">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/QFpfhJzD/IMG-20260210-WA0058-(1).jpg" alt="Recuerdo 3">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/Bjxm4BVr/IMG-20260210-WA0081.jpg" alt="Recuerdo 4">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/pmDsRJ6J/IMG-20260407-WA0004.jpg" alt="Recuerdo 5">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/v4W0btNN/IMG-20260407-WA0005.jpg" alt="Recuerdo 6">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/K1n0xDHr/IMG-20260410-WA0005.jpg" alt="Recuerdo 7">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/Yv1dMzsR/IMG-20260502-WA0046.jpg" alt="Recuerdo 8">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/fVx8Dfr7/IMG-20260502-WA0047.jpg" alt="Recuerdo 9">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.postimg.cc/ZWkwGMVj/IMG-20260610-WA0026.jpg" alt="Recuerdo 10">
+    </div>
+
+  </div>
+
+  <h2>Una carta para ti 💌</h2>
+
+  <p>Lore...</p>
+
+  <p>
+    hoy es tu dia especial, el momento que hemos esperado por meses😂,
+    tu cumple, tus 18. Hoy aunque no podamos vernos, celebrar y abrazarnos
+    como quisiéramos estamos juntas. Puede que no siempre podamos estar
+    juntas, que no podamos vernos cada vez que queremos, darnos un abrazo
+    cuando tenemos un mal día o compartir todos nuestros momentos como nos
+    gustaría. Pero quiero que tengas algo muy claro: la distancia nunca
+    va a cambiar lo importante que eres para mí.
+  </p>
+
+  <p>
+    Aunque estemos lejos, voy a seguir estando para ti. Para escucharte,
+    apoyarte, celebrar tus logros, acompañarte en tus días difíciles y
+    recordarte lo increíble que eres cuando se te olvide.
+  </p>
+
+  <p>
+    Hay amistades que llegan sin hacer ruido y terminan convirtiéndose
+    en una parte enorme de nuestra vida. Hoy comienza una etapa llena
+    de oportunidades, sueños y experiencias nuevas. Deseo que la vida
+    te regale motivos para sonreír, personas que te cuiden bonito y
+    la fuerza para perseguir todo aquello que te haga feliz. Gracias por
+    cada conversación, cada risa, cada consejo y cada momento en el que
+    simplemente estar juntas hizo que todo fuera mejor. Valoro muchísimo
+    poder contar contigo y tener una amistad en la que puedo ser yo misma.
+  </p>
+
+  <p>
+    Los recuerdos que nos unen, A veces una foto parece guardar solamente
+    un instante, pero detrás de ella hay historias, bromas, palabras y
+    emociones que solo nosotras entendemos.
+  </p>
+
+  <p>
+    Te quiero en mi vida por muchisimo tiempo, la tía de mi hija (Ela).😂
+  </p>
+
+  <p>
+    Gracias por nacer y coincidir conmigo en esta vida...
+    gracias por ser mi mejor amiga.
+  </p>
+
+  <h1>t amo❤</h1>
+
+</div>
+
+<script>
+function enter() {
+  const password = document.getElementById("password").value;
+
+  if (password === "7768") {
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("gift").classList.remove("hidden");
+  } else {
+    document.getElementById("error").textContent =
+      "Esa no es la clave. Inténtalo otra vez ❤️";
+  }
+}
+</script>
+
+</body>
+</html>
